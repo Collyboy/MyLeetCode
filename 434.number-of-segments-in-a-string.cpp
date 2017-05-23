@@ -23,6 +23,13 @@
 class Solution {
 public:
     int countSegments(string s) {
-        
+	istringstream record(s);
+	int count=0;
+	string word;
+	if((record>>word) == " ")
+		count++;
+	while(record>>word)
+		count++;
+	return count;
     }
 };
